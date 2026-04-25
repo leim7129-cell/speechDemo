@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F9FB">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="#1A1C1E"
+            android:padding="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发音反馈"
+            android:textColor="#1A1C1E"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Content Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Card Header -->
+            <LinearLayout
+                android:id="@+id/layout_eval_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:background="#00FFFFFF">
+
+                <TextView
+                    android:id="@+id/tv_eval_emoji"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_circle_emoji"
+                    android:gravity="center"
+                    android:text="😊"
+                    android:textSize="28sp"
+                    android:elevation="2dp" />
+
+                <TextView
+                    android:id="@+id/tv_eval_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:text="开始练习"
+                    android:textColor="#3B5FF5"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Score Display Circle -->
+                <LinearLayout
+                    android:id="@+id/layout_score_click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="56dp"
+                        android:layout_height="56dp">
+
+                        <ProgressBar
+                            android:id="@+id/pb_score_circle"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/circle_progress_bar" />
+
+                        <TextView
+                            android:id="@+id/tv_score_small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="0分"
+                            android:textColor="#3B5FF5"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="4dp"
+                        android:src="@android:drawable/arrow_down_float"
+                        android:rotation="-90"
+                        app:tint="#3B5FF5" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Input Area -->
+
+            <!-- Practice Text Area -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_practice_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="读出任意句子，获得即时反馈"
+                        android:textColor="#999999"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_result"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:textColor="#333333"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- Language Switcher & Custom Input -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/et_custom_sentence"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="输入练习句子"
+                        android:textSize="14sp"
+                        android:background="@android:drawable/editbox_background"
+                        android:padding="8dp"/>
+
+                    <Button
+                        android:id="@+id/btn_set_sentence"
+                        android:layout_width="60dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="设置"
+                        android:textSize="12sp"
+                        android:background="@drawable/bg_rounded_button"
+                        android:textColor="#333333"/>
+
+                    <Button
+                        android:id="@+id/btn_switch_language"
+                        android:layout_width="60dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="EN"
+                        android:textSize="12sp"
+                        android:background="@drawable/bg_rounded_button"
+                        android:textColor="#3B5FF5"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Syllable Score Bar (Mock) -->
+
+            <!-- Action Buttons inside Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center">
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Bottom Record Button -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/btn_record"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@android:drawable/screen_background_light_transparent"
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:padding="20dp"
+            android:elevation="4dp" />
+
+        <!-- Circle background for record button -->
+        <View
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@android:drawable/presence_online"
+            android:alpha="0.1" />
+    </RelativeLayout>
+
+</LinearLayout>

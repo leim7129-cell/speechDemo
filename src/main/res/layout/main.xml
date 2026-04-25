@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_backgroud"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_"
+        android:layout_marginRight="@dimen/margin_"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_size" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/iseBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:text="立刻体验语音评测"
+                android:textColor="@color/black"
+                android:textSize="@dimen/btn_size" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/aiChatBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:text="立刻体验 AI 对话训练"
+                android:textColor="@color/black"
+                android:textSize="@dimen/btn_size" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/accountManageBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/auth_btn_account_manage"
+                android:textColor="@color/black"
+                android:textSize="@dimen/btn_size" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#007AFF"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/chat_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="AI 对话训练"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_switch_language"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_toLeftOf="@+id/btn_switch_scene"
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"
+            android:text="语言: EN"
+            android:textSize="12sp"
+            android:background="#33FFFFFF"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btn_switch_scene"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="日常"
+            android:textSize="12sp"
+            android:background="#33FFFFFF"
+            android:textColor="#FFFFFF"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/chat_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:padding="8dp"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btn_voice_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="按住 说话"
+            android:background="@drawable/main_setting_btn_np"
+            android:textColor="#333333"/>
+    </LinearLayout>
+
+</LinearLayout>

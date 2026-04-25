@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Top Left Back Arrow -->
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/ic_menu_revert"
+        android:layout_marginBottom="60dp"
+        android:padding="4dp" />
+
+    <!-- Center Title and Instruction -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="账号密码登录"
+        android:textColor="#1A1C1E"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:text="机构用户专属，请联系相关管理员开通账号"
+        android:textColor="#999999"
+        android:textSize="14sp" />
+
+    <!-- Input Fields -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_account"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/main_setting_btn_np"
+            android:hint="请输入账号"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/main_setting_btn_np"
+            android:hint="请输入密码"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/main_setting_btn_np"
+        android:text="登录"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:textAllCaps="false" />
+
+    <!-- Spacer to push bottom text down -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Bottom Contact -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="机构定制，点击联系客服"
+        android:textColor="#3B5FF5"
+        android:textSize="14sp" />
+
+</LinearLayout>

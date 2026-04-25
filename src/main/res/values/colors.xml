@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- 画面背景色 -->
+    <drawable name="layout_backgroud">#000000</drawable>
+
+    <!-- 分割线背景色 -->
+    <drawable name="line_background">#161823</drawable>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000</color>
+
+    <color name="brand_primary">#3B5FF5</color>
+    <color name="brand_primary_dark">#2B4FD5</color>
+    <color name="brand_red">#FF3B30</color>
+    <color name="text_primary">#1A1C1E</color>
+    <color name="text_secondary">#999999</color>
+    <color name="text_hint">#CCCCCC</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="bg_secondary">#F8F9FB</color>
+    <color name="bg_input">#F5F6FA</color>
+    <color name="qq_blue">#12B7F5</color>
+    <color name="wechat_green">#07C160</color>
+
+    <!-- 控件按下时显示的颜色 -->
+    <color name="list_backgroud_color">#2fb3cb</color>
+    <color name="title_color">#0f8ec5</color>
+    <color name="content_color">#737373</color>
+
+</resources>
