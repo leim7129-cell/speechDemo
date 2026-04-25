@@ -35,11 +35,18 @@ public class MainActivity extends AppCompatActivity {
 
         SpeechApp.initializeMsc(this);
 
-        initView();
-        mSharedPreferences = getSharedPreferences(TtsSettings.PREFER_NAME, Activity.MODE_PRIVATE);
-        boolean privacyConfirm = mSharedPreferences.getBoolean(SpeechApp.PRIVACY_KEY, false);
-        if (!privacyConfirm) {
-            showPrivacyDialog();
+        if (SessionManager.getInstance(this).isLoggedIn()) {
+            initView();
+            mSharedPreferences = getSharedPreferences(TtsSettings.PREFER_NAME, Activity.MODE_PRIVATE);
+            boolean privacyConfirm = mSharedPreferences.getBoolean(SpeechApp.PRIVACY_KEY, false);
+            if (!privacyConfirm) {
+                showPrivacyDialog();
+            }
+        } else {
+            Intent intent = new Intent(this, WelcomeActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
         }
     }
 
