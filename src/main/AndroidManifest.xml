@@ -31,15 +31,17 @@
             android:label="星空外语"
             android:screenOrientation="portrait"
             android:exported="true">
+        </activity>
+        <activity
+            android:name="com.iflytek.voicedemo.auth.LoginActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
+            android:screenOrientation="portrait"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.iflytek.voicedemo.auth.LoginActivity"
-            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
-            android:screenOrientation="portrait" />
         <activity
             android:name="com.iflytek.voicedemo.auth.RegisterActivity"
             android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
